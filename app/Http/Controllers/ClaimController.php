@@ -11,7 +11,6 @@ class ClaimController extends Controller
     {
         $claim = Claim::included() 
         ->filter()
-        ->sort()
         ->getOrPaginate();;
 
         return response()->json([

@@ -11,7 +11,6 @@ class SettingController extends Controller
     {
         $setting = Setting::included() 
         ->filter()
-        ->sort()
         ->getOrPaginate();;
 
         return response()->json([

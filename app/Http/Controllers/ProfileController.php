@@ -14,7 +14,6 @@ class ProfileController extends Controller
     {
         $profile = Profile::included() 
         ->filter()
-        ->sort()
         ->getOrPaginate();;
 
         return response()->json([

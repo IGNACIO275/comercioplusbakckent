@@ -11,7 +11,6 @@ class LocationController extends Controller
     {
         $location = Location::included() 
         ->filter()
-        ->sort()
         ->getOrPaginate();;
 
         return response()->json([

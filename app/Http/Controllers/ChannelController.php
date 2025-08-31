@@ -11,7 +11,6 @@ class ChannelController extends Controller
     {
         $channel = Channel::included() 
         ->filter()
-        ->sort()
         ->getOrPaginate();;
 
         return response()->json([

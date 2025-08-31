@@ -11,7 +11,6 @@ class SaleController extends Controller
     {
         $sale = Sale::included() 
         ->filter()
-        ->sort()
         ->getOrPaginate();;
 
         return response()->json([

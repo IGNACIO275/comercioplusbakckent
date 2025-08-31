@@ -7,17 +7,15 @@ use Illuminate\Http\Request;
 
 class TutorialController extends Controller
 {
-      public function index()
+    public function index()
     {
-        $tutorial = Tutorial::included() 
-        ->filter()
-        ->sort()
-        ->getOrPaginate();;
+        $tutorials = Tutorial::all(); // Puedes usar all() o paginate() si quieres paginación
 
         return response()->json([
             'status' => 'ok',
-            'message' => 'Listado de productos',
-            'data' => $tutorial,
+            'message' => 'Listado de tutoriales',
+            'data' => $tutorials,
         ]);
     }
 }
+

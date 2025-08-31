@@ -14,7 +14,7 @@ class UserController extends Controller
     {
         $user = User::included() 
         ->filter()
-        ->sort()
+        ->orderBy('name')
         ->getOrPaginate();;
 
         return response()->json([

@@ -11,7 +11,6 @@ class RoleController extends Controller
     {
         $role = Role::included() 
         ->filter()
-        ->sort()
         ->getOrPaginate();;
 
         return response()->json([

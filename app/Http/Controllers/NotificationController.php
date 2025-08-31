@@ -11,7 +11,6 @@ class NotificationController extends Controller
     {
         $Notification = Notification::included() 
         ->filter()
-        ->sort()
         ->getOrPaginate();;
 
         return response()->json([

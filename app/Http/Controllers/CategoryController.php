@@ -11,7 +11,6 @@ class CategoryController extends Controller
     {
         $cateogry = Category::included() 
         ->filter()
-        ->sort()
         ->getOrPaginate();;
 
         return response()->json([

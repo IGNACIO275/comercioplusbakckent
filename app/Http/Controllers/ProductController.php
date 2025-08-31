@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
+
 class ProductController extends Controller
 {
     /**
@@ -14,7 +15,6 @@ class ProductController extends Controller
     {
         $productos = Product::included() 
         ->filter()
-        ->sort()
         ->getOrPaginate();;
 
         return response()->json([
@@ -23,6 +23,9 @@ class ProductController extends Controller
             'data' => $productos,
         ]);
     }
+   
+
+ 
 
     /**
      * Aquí puedes agregar más métodos si deseas (store, show, update, destroy)

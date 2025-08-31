@@ -11,7 +11,6 @@ class RatingController extends Controller
     {
         $rating = Rating::included() 
         ->filter()
-        ->sort()
         ->getOrPaginate();;
 
         return response()->json([

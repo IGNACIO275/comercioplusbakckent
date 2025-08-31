@@ -11,7 +11,6 @@ class OrderMessageController extends Controller
     {
         $ordenmensaje = OrderMessage::included() 
         ->filter()
-        ->sort()
         ->getOrPaginate();;
 
         return response()->json([

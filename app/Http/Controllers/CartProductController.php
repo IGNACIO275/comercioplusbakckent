@@ -11,7 +11,6 @@ class CartProductController extends Controller
     {
         $cartproduct = CartProduct::included() 
         ->filter()
-        ->sort()
         ->getOrPaginate();;
 
         return response()->json([
